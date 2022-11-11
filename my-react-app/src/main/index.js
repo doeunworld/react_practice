@@ -9,7 +9,7 @@ function MainPage() {
         <img src="./images/wavetop.jpeg" alt="파도윗부분" />
       </div>
       <div className="mainContainer">
-        <h2 className="title">도은 영화 추천</h2>
+        <h2 className="title">도은 마켓</h2>
 
         <div className="mainWrapper">
           <div id="product-list">
@@ -18,6 +18,7 @@ function MainPage() {
                 <img
                   className="product-img"
                   src="./images/products/keyboard1.jpg"
+                  alt="키보드 이미지"
                 ></img>
               </div>
               <div className="product-contents">
