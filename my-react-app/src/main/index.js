@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function MainPage() {
   const [products, setProducts] = React.useState([]);
@@ -21,11 +22,6 @@ function MainPage() {
 
   return (
     <div>
-      <div id="header">
-        <div id="header-area">
-          <img src="images/icons/logo.png" alt="로고" />
-        </div>
-      </div>
       <div id="body">
         <div id="banner">
           <img src="images/wavetop.jpeg" alt="배경" />
@@ -36,31 +32,32 @@ function MainPage() {
             products.map(function (product, index) {
               return (
                 <div className="product-card">
-                  <div>
-                    <img
-                      className="product-img"
-                      src={product.imageUrl}
-                      alt="상품이미지"
-                    />
-                  </div>
-                  <div className="product-contents">
-                    <span className="product-name">{product.name}</span>
-                    <span className="product-price">{product.price}원</span>
-                    <div className="product-seller">
+                  <Link className="product-link" to={`/products/${product.id}`}>
+                    <div>
                       <img
-                        className="product-avatar"
-                        src="images/icons/avatar.png"
+                        className="product-img"
+                        src={product.imageUrl}
                         alt="상품이미지"
                       />
-                      <span>{product.seller}</span>
                     </div>
-                  </div>
+                    <div className="product-contents">
+                      <span className="product-name">{product.name}</span>
+                      <span className="product-price">{product.price}원</span>
+                      <div className="product-seller">
+                        <img
+                          className="product-avatar"
+                          src="images/icons/avatar.png"
+                          alt="상품이미지"
+                        />
+                        <span>{product.seller}</span>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
               );
             })}
         </div>
       </div>
-      <div id="footer"></div>
     </div>
   );
 }
