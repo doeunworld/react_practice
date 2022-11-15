@@ -1,5 +1,5 @@
 import "./App.css";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import MainPage from "./main/index";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import ProductPage from "./product";

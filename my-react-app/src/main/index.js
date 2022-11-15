@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 
 function MainPage() {
   const [products, setProducts] = React.useState([]);
